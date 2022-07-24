@@ -9,6 +9,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  background-color: #fff;
+  top: 0px;
+  z-index: 1;
 }
 
 .header__logo {
@@ -94,6 +98,7 @@ footer {
 .about__sun-image {
   width: 100px;
   height: 100px;
+  position: absolute;
 }
 
 .about__info {
@@ -149,6 +154,7 @@ footer {
   padding: 0px 20px 0px 20px;
   border-radius: 15px;
   border: none;
+  margin-bottom: 20px;
 }
 
 .form select {
@@ -194,4 +200,85 @@ footer {
 
 .footer__links a {
   margin-bottom: 15px;
+}
+
+.animate__animated.animate__fadeInLeft {
+  animation-duration: 2s;
+}
+
+.animate__animated.animate__fadeInRight {
+  animation-duration: 2s;
+}
+
+.about__sun-image {
+  animation: rotation 10s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .about,
+  .form,
+  footer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+@media (max-width: 720px) {
+  header {
+    padding: 10px;
+  }
+  .header a {
+    margin-right: 10px;
+  }
+  .header__logo {
+    height: 20px;
+  }
+  .about {
+    flex-direction: column-reverse;
+    padding: 50px 10px;
+  }
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    height: 75px;
+    width: 75px;
+  }
+  .form {
+    padding: 50px 10px;
+  }
+  .form h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  footer {
+    padding: 50px 10px;
+  }
+  .footer__container {
+    flex-direction: column;
+  }
 }
